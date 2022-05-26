@@ -18,4 +18,10 @@ puts "Creating freebies..."
 # ***************************************************************
 # Create freebies Here
 
+counter = 0
+    10.times do
+    counter += 1
+    Freebie.create(dev: Dev.all.sample, company: Company.all.sample, value: rand(1..100), item_name: "item#{counter}")
+end
+
 puts "Seeding done!"
